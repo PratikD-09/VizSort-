@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+  <title>Sorting Algorithm Visualization</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <img class="burger" src="burger.svg" alt="X">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main ">
+    <div class="left">
+      <div class="home">
+        <img src="home.svg" alt="home">
+        <div>Home</div>
+        <div><img class="close" src="close.svg" alt="close"></div>
+
+      </div>
+      <div style="color: white; font-size: larger; margin-left:10px ; margin-top: -15px;">_______________________</div>
+      <div class="sort home">
+        <img src="sort.svg" alt="home">
+        <div>Sorts</div>
+      </div>
+
+      <div class="sortlist">
+        <h3 style="color: rgb(57, 57, 57); margin: 20px;">LOGARETHMIC</h3>
+        <h2 class="sEl"><a class="SBlink" href="quick.html">Quick Sort</a></h2>
+        <h2 class="sEl"><a class="SBlink" href="heap.html">Heap Sort</a></h2>
+      </div>
+
+      <div class="sortlist">
+        <h3 style="color: rgb(57, 57, 57); margin: 20px;">QUADRATIC</h3>
+        <h2 class="sEl"><a class="SBlink" href="BUBindex.html">Bubble Sort</a></h2>
+        <h2 class="sEl"><a class="SBlink" href="selection.html">Selection Sort</a></h2>
+        <h2 class="sEl"><a class="SBlink" href="incertion.html">Incertion Sort</a></h2>
+      </div>
+    </div>
+
+     
+    <div class="right">
+      <div class="container">
+        <h1>Quick Sort</h1>
+        <div class="cont">
+          <label style="color: aliceblue;" for="arraySizeInput">Enter Number of Bars :</label>
+          <input type="number" class="input" min="1" max="100" value="50" id="arraySizeInput">
+
+
+          <div>
+            <label style="color: aliceblue;" for="range">Speed :</label>
+            <input type="range" class="range" min="1" max="100" value="50" id="speedRange">
+          </div>
+
+          <div class="array-container" id="arrayContainer">
+          </div>
+
+
+          <button class="button btn" id="startSorting" onclick="startSorting()">Start Sorting</button>
+          <button class="button btn" id="stopSorting" onclick="stopSorting()">Stop Sorting</button>
+          <button class="button btn" onclick="resetArray()">Generate New Array</button>
+        </div>
+
+      </div>
+
+      <div class="btwn">
+        <div class="para">
+            <h2>Description</h2>
+            <p>Quicksort is a widely used sorting algorithm known for its efficiency and simplicity. It falls under the category of comparison-based sorting algorithms and follows the divide-and-conquer strategy</p>
+        </p>
+            <br>
+            <p>The basic idea behind Quicksort is to partition the array into two sub-arrays based on a chosen pivot element, .</p>
+            <br>
+            <p>such that elements smaller than the pivot are placed to its left, and elements greater than the pivot are placed to its right. This process is repeated recursively for each sub-array until the entire array is sorted.
+                </p>
+        </div>
+    
+        <!--Table-->
+        <div class="chart">
+            <h2>Complexity</h2>
+            <div class="table">
+              <table>
+                <tr>
+                    <td>Average Complexity</td>
+                    <td>O(n log n)</td>
+                </tr>
+                <tr>
+                    <td>Best Case</td>
+                    <td>O(n log n)</td>
+                </tr>
+                <tr>
+                    <td>Worst Case</td>
+                    <td>O(n^2)</td>
+                </tr>
+                <tr>
+                    <td>Space Complexity</td>
+                    <td>O(log n)</td>
+                </tr>
+            </table>
+            </div>
+            
+        </div>
+        <!-- Algotethhem Menu -->
+        <div class="Menu">
+          <div class="language-selector">
+              <button style="width: 150px;" onclick="showContent('c')">C</button>
+              <button onclick="showContent('cpp')">C++</button>
+              <button onclick="showContent('java')">Java</button>
+              <button onclick="showContent('python')">Python</button>
+              <button onclick="showContent('javascript')">JavaScript</button>
+          </div>
+          <div id="content" class="content">
+             
+          </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+
+
+  <script src="quick.js"></script>
+</body>
+
+</html>

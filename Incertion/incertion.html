@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+  <title>Sorting Algorithm Visualization</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <img class="burger" src="burger.svg" alt="X">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main ">
+    <div class="left">
+      <div class="home">
+        <img src="home.svg" alt="home">
+        <div>Home</div>
+        <div><img class="close" src="close.svg" alt="close"></div>
+
+      </div>
+      <div style="color: white; font-size: larger; margin-left:10px ; margin-top: -15px;">_______________________</div>
+      <div class="sort home">
+        <img src="sort.svg" alt="home">
+        <div>Sorts</div>
+      </div>
+
+      <div class="sortlist">
+        <h3 style="color: rgb(57, 57, 57); margin: 20px;">LOGARETHMIC</h3>
+        <h2 class="sEl">Quick Sort</h2>
+        <h2 class="sEl">Merge Sort</h2>
+        <h2 class="sEl">Heap Sort</h2>
+      </div>
+
+      <div class="sortlist">
+        <h3 style="color: rgb(57, 57, 57); margin: 20px;">QUADRATIC</h3>
+        <h2 class="sEl"><a href="bubble.html">Bubble Sort</a></h2>
+        <h2 class="sEl">Selection Sort</h2>
+        <h2 class="sEl"><a href="incertion.html">Incertion Sort</a></h2>
+        <h2 class="sEl">Gnome Sort</h2>
+        <h2 class="sEl">Shaker Sort</h2>
+        <h2 class="sEl">Odd Even Sort</h2>
+        <h2 class="sEl">Pancake Sort</h2>
+      </div>
+
+      <div class="sortlist">
+        <h3 style="color: rgb(57, 57, 57); margin: 20px;">WIERD</h3>
+        <h2 class="sEl">Bitcoine Sort</h2>
+        <h2 class="sEl">Radix Sort</h2>
+        <h2 class="sEl">Shell Sort</h2>
+        <h2 class="sEl">Comb Sort</h2>
+        <h2 class="sEl">Bogo Sort</h2>
+        <h2 class="sEl">Stooge Sort</h2>
+      </div>
+    </div>
+    <div class="right">
+      <div class="container">
+        <h1>Incertion Sort</h1>
+        <div class="cont">
+          <label style="color: aliceblue;" for="arraySizeInput">Enter Number of Bars :</label>
+          <input type="number" class="input" min="1" max="100" value="50" id="arraySizeInput">
+
+
+          <div>
+            <label style="color: aliceblue;" for="range">Speed :</label>
+            <input type="range" class="range" min="1" max="100" value="50" id="speedRange">
+          </div>
+
+          <div class="array-container" id="arrayContainer">
+          </div>
+
+
+          <button class="button btn" id="startSorting" onclick="startSorting()">Start Sorting</button>
+          <button class="button btn" id="stopSorting" onclick="stopSorting()">Stop Sorting</button>
+          <button class="button btn" onclick="resetArray()">Generate New Array</button>
+        </div>
+
+      </div>
+
+      <div class="btwn">
+        <div class="para">
+            <h2>Description</h2>
+            <p>Insertion Sort is an iterative sorting algorithm that builds the final sorted array one element at a time. It's like sorting playing cards in your hand by shifting cards to their correct positions.</p>
+<br>
+<p>At each iteration, the algorithm takes one element from the unsorted part of the array and places it in its correct position in the sorted part. It does this by comparing the element with the previous elements in the sorted part and shifting them to the right until finding the correct position.</p>
+<br>
+<p>While not as fast as more advanced sorting algorithms like Quick Sort or Merge Sort, Insertion Sort can be more efficient for small datasets or nearly sorted arrays due to its simplicity. Average and worst-case time complexity is O(n^2), while the best-case time complexity is O(n).</p>
+<br>
+<p>Insertion Sort has some advantages over other quadratic sorting algorithms like Bubble Sort or Selection Sort, as it performs better on partially sorted arrays. However, it's less efficient for large datasets.</p>
+
+        </div>
+    
+        <!--Table-->
+        <div class="chart">
+            <h2>Complexity</h2>
+            <div class="table">
+              <table>
+                <tr>
+                    <td>Average Complexity</td>
+                    <td>O(n^2)</td>
+                </tr>
+                <tr>
+                    <td>Best Case</td>
+                    <td>O(n)</td>
+                </tr>
+                <tr>
+                    <td>Worst Case</td>
+                    <td>O(n^2)</td>
+                </tr>
+                <tr>
+                    <td>Space Complexity</td>
+                    <td>O(1)</td>
+                </tr>
+            </table>
+            
+            </div>
+            
+        </div>
+        <!-- Algotethhem Menu -->
+        <div class="Menu">
+          <div class="language-selector">
+              <button style="width: 150px;" onclick="showContent('c')">C</button>
+              <button onclick="showContent('cpp')">C++</button>
+              <button onclick="showContent('java')">Java</button>
+              <button onclick="showContent('python')">Python</button>
+              <button onclick="showContent('javascript')">JavaScript</button>
+          </div>
+          <div id="content" class="content">
+             
+          </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+
+
+  <script src="INscript.js"></script>
+</body>
+
+</html>
